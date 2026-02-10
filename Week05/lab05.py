@@ -150,7 +150,14 @@ def binary_search_iterative(nums, target):
     #   - If nums[mid] == target, return mid
     #   - If target < nums[mid], search left half: right = mid - 1
     #   - If target > nums[mid], search right half: left = mid + 1
-
+    while left <= right:
+        mid = (left + right) // 2
+        if nums[mid] == target:
+            return mid
+        elif target < nums[mid]:
+            right = mid - 1
+        else:
+            left = mid + 1
     # TODO: Return -1 if target not found
     return -1
 
@@ -170,18 +177,20 @@ def binary_search_recursive(nums, target, left, right):
         int: Index of target, or -1 if not found
     """
     # TODO: Base case - If left > right, return -1 (target not found)
-
+    if left > right:
+        return -1
     # TODO: Calculate mid = (left + right) // 2
-
+    mid = (left + right) // 2
     # TODO: If nums[mid] == target, return mid
-
+    if nums[mid] == target:
+        return mid
     # TODO: If target < nums[mid], recurse on left half
     # Hint: return binary_search_recursive(nums, target, left, mid - 1)
-
+    if target < nums[mid]:
+        return binary_search_recursive(nums, target, left, mid - 1)
     # TODO: If target > nums[mid], recurse on right half
     # Hint: return binary_search_recursive(nums, target, mid + 1, right)
-
-    pass  # Remove this line when you add your code
+    return binary_search_recursive(nums, target, mid + 1, right)
 
 
 # Wrapper function for recursive solution
