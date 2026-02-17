@@ -1,0 +1,7 @@
+2026-02-17 11:40:22,ping,1,N/A,Failed
+2026-02-17 11:41:49,ping,google.com,26.966,Success
+2026-02-17 11:42:10,nslookup,github.com,140.82.113.3,Success
+2026-02-17 11:42:20,ifconfig,en0,5a:d8:9a:64:16:34 / 10.4.144.187,Captured
+2026-02-17 11:42:35,arp,local,13 devices,Captured
+2026-02-17 11:43:23,ping,youtube.com,29.748,Success
+2026-02-17 11:44:02,ping,amazon.com,N/A,Failed

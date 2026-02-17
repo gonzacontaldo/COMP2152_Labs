@@ -1,0 +1,24 @@
+[2026-02-17 11:40:22] PING 1
+Ping failed: Command timed out after 10 seconds.----------------------------------------
+[2026-02-17 11:41:49] PING google.com
+PING google.com (142.250.137.101): 56 data bytes
+64 bytes from 142.250.137.101: icmp_seq=0 ttl=115 time=4.954 ms
+64 bytes from 142.250.137.101: icmp_seq=1 ttl=115 time=8.267 ms
+64 bytes from 142.250.137.101: icmp_seq=2 ttl=115 time=67.677 ms
+
+--- google.com ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 4.954/26.966/67.677/28.819 ms
+----------------------------------------
+[2026-02-17 11:43:23] PING youtube.com
+PING youtube.com (192.178.192.93): 56 data bytes
+64 bytes from 192.178.192.93: icmp_seq=0 ttl=113 time=7.263 ms
+64 bytes from 192.178.192.93: icmp_seq=1 ttl=113 time=17.902 ms
+64 bytes from 192.178.192.93: icmp_seq=2 ttl=113 time=64.078 ms
+
+--- youtube.com ping statistics ---
+3 packets transmitted, 3 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 7.263/29.748/64.078/24.661 ms
+----------------------------------------
+[2026-02-17 11:44:02] PING amazon.com
+Ping failed: Command timed out after 10 seconds.----------------------------------------
