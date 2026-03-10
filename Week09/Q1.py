@@ -32,14 +32,23 @@ def safe_run(label, func, *args):
 #   Use: platform.system(), platform.node(),
 #        platform.release(), platform.machine()
 def get_system_info():
-    pass
+    return {
+        "OS": platform.system(),
+        "Node": platform.node(),
+        "Release": platform.release(),
+        "Machine": platform.machine(),
+    }
 
 
 # TODO: Complete get_python_info()
 #   Return a dict with keys: "version", "executable", "platform"
 #   Use: sys.version, sys.executable, sys.platform
 def get_python_info():
-    pass
+    return {
+        "Version": sys.version,
+        "Executable": sys.executable,
+        "Platform": sys.platform,
+    }
 
 
 # TODO: Complete get_directory_info(path)
@@ -47,7 +56,12 @@ def get_python_info():
 #   Use: os.path.abspath(), os.path.exists(),
 #        os.listdir() (count items), os.path.isdir()
 def get_directory_info(path):
-    pass
+    return {
+        "Path": os.path.abspath(path),
+        "Exists": os.path.exists(path),
+        "File Count": len(os.listdir(path)) if os.path.isdir(path) else 0,
+        "Is Directory": os.path.isdir(path),
+    }
 
 
 # --- Main (provided) ---
