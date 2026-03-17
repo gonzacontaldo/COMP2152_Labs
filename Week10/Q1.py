@@ -58,9 +58,9 @@ def get_all_credentials():
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM vault ORDER BY website ASC")
-    credentials = cursor.fetchall()
+    rows = cursor.fetchall()
     conn.close()
-    return credentials
+    return rows
 
 
 # TODO: Complete find_credential(website)
@@ -71,9 +71,9 @@ def find_credential(website):
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM vault WHERE website = ?", (website,))
-    credentials = cursor.fetchall()
+    rows = cursor.fetchall()
     conn.close()
-    return credentials
+    return rows
 
 
 # --- Main (provided) ---
